@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Birthday Party Went Wrong</title>
 
     <style>
@@ -26,6 +27,13 @@
             padding: 0;
             /*font-family: 'Arial', sans-serif;*/
             font-family: 'Roboto', sans-serif;
+        }
+        p {
+            display: block;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
         }
 
         .container {
@@ -910,6 +918,58 @@
             position: inherit;
         }
 
+        .phone {
+            font-family: 'Montserrat', sans-serif;
+            margin: 24px 0 24px;
+        }
+
+        .phone-form {
+            margin: 0 auto;
+            max-width: 440px;
+            width: 90%;
+            border-radius: 40px;
+            background-color: #E4E1E1;
+            padding: 20px 20px 12px;
+
+
+        }
+        .phone-form p {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            font-size: 24px;
+            color: #4B3838;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .phone-form input {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            margin: 12px auto;
+            min-height: 40px;
+            width: 80%;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+
+        }
+
+        .phone-form a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 220px;
+            height: 75px;
+            border-radius: 40px;
+            background-color: #241D20;
+            font-size: 38px;
+            color: #fff;
+            text-decoration: none;
+        }
+
 
 
 
@@ -1219,9 +1279,6 @@
                     </div>
                 </div>
 
-
-
-
             </div>
             <!-- /.container -->
         </div>
@@ -1231,7 +1288,6 @@
 
     <footer class="recomends">
         <div class="container container_pad">
-
 
             <div class="recomends__body">
 
@@ -1364,6 +1420,17 @@
         <!-- /.container container_pad -->
     </footer>
     <!-- /.footer -->
+
+    <div class="phone">
+        <div class="container">
+            <form action="" class="phone-form">
+                <p>Enter your number to get access to this content</p>
+                <input type="text">
+                <a href="#" class="button">Watch</a>
+            </form>
+            <!-- /.phone-phorm -->
+        </div>
+    </div>
 
 
 <!--    <script>-->
