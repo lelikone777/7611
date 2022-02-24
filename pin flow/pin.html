@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue</title>
+    <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+<body>
+    <input type="text" class="hiddenInput" inputmode="numeric" maxlength="4">
+    <div class="wrapper">
+        <main>
+            <div class="container">
+                <img src="img/mobile.png" alt="Main image" class="main-img">
+                <form method="POST">
+                    <p>Unesite pin</p>
+                    <div class="input">
+                        <div class="inputBlock inputPinBlock">
+                            <input class="pin mainInput" style="text-align: center;" type="text" name="pin" placeholder="XXXX" inputmode="numeric" required>
+                            <div class="cursor"></div>
+                        </div>
+                    </div>
+                    <button class="button" type="submit">
+                        Prijavi se
+                    </button>
+                    <p class="error"></p>
+                </form>
+                <p class="underformText">
+                    Stay Home - Stay Safe
+                </p>
+                <div class="terms">
+<!--                    <a href="https://aeg.games-universe.online/terms">Terms & Conditions</a>-->
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+<!--                Service costs AED 12/week for Etisalat customers.-->
+                Games Universe je vaša aplikacija za kolekciju najboljih igara iz mnogih zabavnih kategorija. Registracijom na ovu uslugu potvrđujete da imate 18 ili više godina. Pružalac usluge: Inspiritum LTD. Sav GPRS/WAP promet će biti naplaćen od strane operatora. Usluga kosta 180 din/sms, 2 sms/nedeljno (plus cena osnovnog SMSa: MTS 3.60din, Telenor 3.60 din, A1 3.48 din). Za odjavu sa servisa posaljite STOP GU za Telenor I A1ili STOPGU za Telekom. Kontakt podrška: inspiritum.rs@silverlines.info, hotline: 00381113216815. Tehnički pružalac usluge NTH Media d.o.o. Beograd.Uslovi
+
+
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js?v=1.0"></script>
+    <script>
+        let form = document.querySelector('form');
+        let input = document.querySelector('.hiddenInput');
+     
+        input.oninput = () => {
+           input.value = input.value.replace(/[^0-9]/, '');
+        }
+        form.onsubmit = (e) => {
+           e.preventDefault();
+     
+           if (input.value.length === 4 && !input.value.match(/([0-9])\1{3,}/) && input.value !== '1234') {
+              form.submit();
+              document.querySelector('button[type=submit]').setAttribute('disabled', 'disabled');
+           } else {
+              input.value = '';
+              document.querySelector('.error').innerHTML = 'Wrong PIN, please try again';
+           }
+        }
+     </script>
+</html>
