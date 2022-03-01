@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>4</title>
 
     <style>
@@ -918,6 +918,9 @@
             position: inherit;
         }
 
+
+
+
         .phone {
             font-family: 'Montserrat', sans-serif;
             margin: 24px 0 24px;
@@ -971,7 +974,60 @@
         }
 
 
+        .alert.phone_block {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            border-radius: 40px;
+            padding: 20px 20px 12px;
+            background-color: #E4E1E1;
+            /*background-color: #94959a;*/
 
+            /*margin: 24px 0 24px;*/
+        }
+
+        .alert.phone_block p {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #4B3838;
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .alert.phone_block > input {
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            min-height: 55px;
+            margin: 8px auto 5px;
+            max-width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        .alert.phone_block > .alert-btns {
+            display: flex;
+            text-align: center;
+            padding-right: 0;
+        }
+
+        .alert.phone_block > .alert-btns > input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 5px 30px;
+            min-height: 45px;
+            border-radius: 40px;
+            background-color: #241D20;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
 
 
     </style>
@@ -991,7 +1047,7 @@
         <p></p>
         <input type="tel" placeholder="Mobile Number" required>
         <div class="alert-btns">
-            <input type="submit" class="second" style="font-size: 20px;" value="Continue">
+            <input type="submit" class="second" style="font-size: 20px;" value="Watch">
         </div>
     </form>
     <header class="header">
@@ -1421,68 +1477,70 @@
     </footer>
     <!-- /.footer -->
 
-    <div class="phone">
-        <div class="container">
-            <form action="" class="phone-form">
-                <p>Enter your number to get access to this content</p>
-                <input type="text">
-                <a href="#" class="button">Watch</a>
-            </form>
-            <!-- /.phone-phorm -->
-        </div>
-    </div>
+<!--    <div class="phone">-->
+<!--        <div class="container">-->
+<!--            <form action="" class="phone-form">-->
+<!--                <p>Enter your number to get access to this content</p>-->
+<!--                <input type="text">-->
+<!--                <a href="#" class="button">Watch</a>-->
+<!--            </form>-->
+<!--            &lt;!&ndash; /.phone-phorm &ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
 
 
-<!--    <script>-->
-<!--        let roller = document.querySelector('.roller');-->
-<!--        let header = document.querySelector('.header');-->
-<!--        let player = document.querySelector('.video-player');-->
-<!--        let videoDescr = document.querySelector('.video-descr');-->
+    <script>
+        let roller = document.querySelector('.roller');
+        let header = document.querySelector('.header');
+        let player = document.querySelector('.video-player');
+        let videoDescr = document.querySelector('.video-descr');
 
-<!--        roller.addEventListener('click', function () {-->
-<!--            this.classList.toggle('roller_active');-->
-<!--        })-->
+        roller.addEventListener('click', function () {
+            this.classList.toggle('roller_active');
+        })
 
-<!--        window.addEventListener('scroll', function () {-->
-<!--            if (window.pageYOffset) {-->
-<!--                videoDescr.style.paddingTop = header.clientHeight + player.clientHeight + 'px';-->
-<!--                header.style.cssText = 'position: fixed; top: 0; width: 100%; z-index: 10;';-->
-<!--                player.style.cssText = 'position: fixed; top:' + header.clientHeight + 'px; width: 100%; max-width: 550px; left: 50%; transform: translateX(-50.1%); z-index: 10;';-->
-<!--            } else {-->
-<!--                videoDescr.style.paddingTop = '0px';-->
-<!--                header.style.cssText = '';-->
-<!--                player.style.cssText = '';-->
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset) {
+                videoDescr.style.paddingTop = header.clientHeight + player.clientHeight + 'px';
+                header.style.cssText = 'position: fixed; top: 0; width: 100%; z-index: 10;';
+                player.style.cssText = 'position: fixed; top:' + header.clientHeight + 'px; width: 100%; max-width: 550px; left: 50%; transform: translateX(-50.1%); z-index: 10;';
+            } else {
+                videoDescr.style.paddingTop = '0px';
+                header.style.cssText = '';
+                player.style.cssText = '';
 
-<!--            }-->
-<!--        });-->
+            }
+        });
 
-<!--        let show = document.querySelector('.show');-->
-<!--        let watch = document.querySelector('.second');-->
-<!--        let download = document.querySelector('.first');-->
-<!--        let phone_block = document.querySelector('.phone_block');-->
+        let show = document.querySelector('.show');
+        let watch = document.querySelector('.second');
+        let download = document.querySelector('.first');
+        let phone_block = document.querySelector('.phone_block');
 
-<!--        let button = [-->
-<!--            [-->
-<!--                document.querySelector('.second'),-->
-<!--                'To watch this video now, please confirm your phone number',-->
-<!--            ],-->
-<!--            [-->
-<!--                document.querySelector('.first'),-->
-<!--                'To start the download, please confirm your phone number',-->
-<!--            ],-->
-<!--        ];-->
+        let button = [
+            [
+                document.querySelector('.second'),
+                'Enter your number to get access to this content',
+                // 'To watch this video now, please confirm your phone number',
+            ],
+            [
+                document.querySelector('.first'),
+                'Enter your number to get access to this content',
+                // 'To start the download, please confirm your phone number',
+            ],
+        ];
 
-<!--        button.forEach(function (el) {-->
-<!--            el[0].onclick = function () {-->
-<!--                show.classList.add('fadeOut');-->
-<!--                setTimeout(function () {-->
-<!--                    phone_block.style.display = 'block';-->
-<!--                    phone_block.classList.add('fadeIn');-->
-<!--                    phone_block.querySelector('p').innerHTML = el[1];-->
-<!--                }, 500);-->
-<!--            }-->
-<!--        });-->
-<!--    </script>-->
+        button.forEach(function (el) {
+            el[0].onclick = function () {
+                show.classList.add('fadeOut');
+                setTimeout(function () {
+                    phone_block.style.display = 'block';
+                    phone_block.classList.add('fadeIn');
+                    phone_block.querySelector('p').innerHTML = el[1];
+                }, 500);
+            }
+        });
+    </script>
     <?php require '../../app/scripts.php' ?>
 
 </body>
