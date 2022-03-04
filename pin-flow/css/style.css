@@ -185,9 +185,15 @@ form p {
 }
 
 .cost {
-    margin-top: 20rem;
+    margin: 15rem auto 0;
+    text-align: center;
     font-weight: normal;
-    font-size: 3vmin;
+    font-size: 16px;
+    /*font-size: 3vmin;*/
+}
+
+.foot {
+    text-align: center;
 }
 
 
